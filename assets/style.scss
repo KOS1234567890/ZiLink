@@ -1,0 +1,346 @@
+
+p,span,div,h1,h2,h3,h4,legend,form,input,header{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+    .row{
+        display: block;
+        margin: 0;
+        .col-md-12{
+            padding: 0;
+            .jumbotron{
+                width: 100%;
+                header{
+                    width: 1890px;
+                    height: 80px;
+                    background-color: #302B3A;
+                    display: flex;
+                    justify-content: space-between;
+                    .left_menu{
+                        display: flex;
+                        gap: 186px;
+                        .logo{
+                            img{
+                                
+                            }
+                        }
+                        .menu_btn{
+                            display: flex;
+                            align-items: center;
+                            gap: 40px;
+                            .btn{
+                                font-size: 1.25em;
+                                height: 100%;
+                                color: #FFFFFF;
+                                border: none;
+                            }
+                            .btn:focus{
+                                border: none;
+                                outline:none;
+                                color: #24C9E3;
+                            }
+                        }
+                    }
+                    
+                    .exit_btn{
+                        display: flex;
+                        align-items: center;
+                        margin-right: 4.63em;
+                    }
+                }
+                main{
+                    
+                    display: flex;
+                    justify-content: flex-start;
+                    white-space: nowrap;
+                    nav{
+                        flex: 0 0 360px;
+                        float: left;
+                        padding: 10px;
+                        max-width: 360px;
+                        background-color: #515E7B;
+                        overflow: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        .newregister_btn{
+                            border-bottom: 1px solid #8C98B2;
+                            margin: 10px 0px;
+                            padding-bottom: 14px;
+                            width: 340px;
+                            display: flex;
+                            justify-content: center;
+                            button{
+                                width: 340px;
+                                padding: .5rem;
+                                background: #0888F8 0% 0% no-repeat padding-box;
+                                border: 0px;
+                                border-radius: 22px;
+                                color: #ffffff;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                img{
+                                    padding-right: 0.75em;
+                                }
+                            }
+                        }
+                        .search-container{
+                            width: 340px;
+                            padding: 0;
+                            .d-flex{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 23px 0;
+                                margin-left: 10px;
+                                p{
+                                    width: 40%;
+                                    font-size: 1.13em;
+                                    color: #ffffff;
+                                    
+                                }
+                                .searchimg{
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+
+                                    ::-webkit-search-cancel-button {
+                                        -webkit-appearance: none;
+                                    }
+
+                                    .form-control{
+                                        padding: 5px 0.63em;
+                                        margin: 0;
+                                        padding-right: 40px;
+                                        font-size: 0.75em;
+                                        width: 200px;
+                                        height: 28px;
+                                    }
+                                    img{
+                                        position: absolute;
+                                        top: 8px;
+                                        right: 11px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }    
+                        .menu-container{
+                            border-radius: 0px;
+                            width: 21.25em;
+                            overflow-y: auto;
+                            height: 41.56em;
+                            box-sizing: border-box;
+                            .menu-item{
+                                width: 322px;
+                                border: none;
+                                padding: 10px;
+                                cursor: pointer;
+                                font-size: 0.75em;
+                                &:hover,&.active {
+                                    background-color: #1CCAD680;border-color: #1CCAD680;
+                                    color: white;
+                                }
+                            }
+                        }
+                        .menu-container::-webkit-scrollbar {
+                            width: 1.13em;
+                        }
+                        .menu-container::-webkit-scrollbar-thumb {
+                            background-color: gray;
+                        }
+                        .menu-container::-webkit-scrollbar-track {
+                            background-color: #E3E3E3;
+                        }
+                        .menu-container::-webkit-scrollbar-button{
+                            display: none;
+                        }
+                        
+                    }
+                    .content{
+                        overflow-x: auto;
+                        white-space: nowrap;
+                        min-width: 1500px;
+                        margin: 1.25em;
+                        border-bottom: 1px solid #707070;
+
+                        
+                        .container_header{
+                            background-color: #24C9E3;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100%;
+                            margin: 0;
+                            padding: 1.19em 2.13em 1.13em 1.25em;
+                            border-radius: 0.31em;
+                            .txtbox{
+                                display: flex;
+                                align-items: center;
+                                h3{
+                                    font-weight: bold;
+                                    font-size: 1.5em;
+                                    margin-right: 1.25em;
+                                }
+                                h4{
+                                    font-size: 1.13em;
+                                }
+                            } 
+                            .menu_btn{
+                                .btn{
+                                    padding: 9px 27px;
+                                    color: #ffffff;
+                                }
+                                .btn.active1{
+                                    background-color: #515E7B;
+                                }
+                                .btn:hover{
+                                    background-color: #515E7B;
+                                }
+                            }       
+                   
+                        }
+                        .container_field{
+                            width: 100%;
+                            padding-left: 1.25em;
+                            form{
+                                legend{
+                                    margin: 1rem 0;
+                                    font-size: 1rem;
+                                }
+                                .agencyTitle{
+                                    font-size: 18px;
+                                    input{
+                                        font-size: 16px;
+                                        width: 18.75em;
+                                        border-radius: 0.31em;
+                                        border:1px solid #707070;
+                                        margin-left:0.94em ;
+                                        padding: 3px 10px;
+                                    }
+                                }
+                                .agencyOwner{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 1rem 0;
+                                    gap: 3.75em;
+                                    p{
+                                        font-size: 18px;
+                                        input{
+                                            padding: 3px 10px;
+                                            font-size: 16px;
+                                            border:1px solid #707070;
+                                            border-radius: 0.31em;
+                                            margin: 0 .2rem;
+                                            height: 1.88em;
+                                        }
+                                    }
+                                    p:nth-of-type(1){
+                                        input{
+                                            margin-left:0.94em ;
+                                            width:7.50em;
+                                        }
+                                    }
+                                    p:nth-of-type(2){
+                                        input{
+                                            margin-left:1.13em ;
+                                            width:160px;
+                                        }
+                                    }
+                                    .addressForm{
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 18px;
+                                        p{
+                                            input{
+                                                padding: 3px 10px;
+                                                font-size: 16px;
+                                                border-radius: 5px;
+                                            }
+                                        }
+                                        p:nth-of-type(1){
+                                            input{
+                                                width:80px;
+                                            }
+                                        }
+                                        p:nth-of-type(2){
+                                            input{
+                                                margin-left: 4px;
+                                                width:300px;
+                                            }
+                                        }
+                                        p:nth-of-type(3){
+                                            
+                                            input{
+                                                width:380px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .manager{
+                                    
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 60px;
+                                    p{
+                                        font-size: 18px;
+                                        input{
+                                            padding: 3px 10px;
+                                            font-size: 16px;
+                                            border:1px solid #707070;
+                                            border-radius: 0.31em;
+                                            margin: 0 .2rem;
+                                            height: 1.88em;
+                                        }
+                                    }
+                                    p:nth-of-type(1){
+                                        input{
+                                            margin-left:1.94em ;
+                                            width:7.50em;
+                                        }
+                                    }
+                                    p:nth-of-type(2){
+                                        input{
+                                            margin-left:1.13em ;
+                                            width:10.00em;
+                                        }
+                                    }
+                                    
+                                    .email{
+                                        font-size: 18px;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: .5rem;
+                                        input,select{
+                                            font-size: 16px;
+                                            padding: 3px 10px;
+                                            width: 240px;
+                                            border-radius: 5px;
+                                            border: 1px solid #707070;
+                                        }
+                                        span{
+                                            small{
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+}

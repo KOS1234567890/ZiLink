@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //email
+    
     domainSelect.addEventListener('change', function() {
         let selectedOption = domainSelect.value;
         if (selectedOption === 'direct') {
@@ -102,4 +103,5 @@ document.addEventListener('DOMContentLoaded', function() {
             domainInput.readOnly = true; 
         }
     });
+    domainInput.readOnly = true; 
 });

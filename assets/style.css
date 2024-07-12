@@ -1,4 +1,5 @@
-p, span, div, h1, h2, h3, h4, legend, form, input, header {
+@charset "UTF-8";
+*, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p, button, span {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,80 +8,103 @@ p, span, div, h1, h2, h3, h4, legend, form, input, header {
 body, html {
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
-  padding: 0;
-  margin: 0;
-  height: 100%;
   box-sizing: border-box;
 }
-body .row, html .row {
+
+input::-moz-placeholder {
+  color: #41464B;
+}
+
+input::placeholder {
+  color: #41464B;
+}
+
+html, nav {
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+body {
+  overflow: none;
+}
+body .row {
   display: block;
   margin: 0;
 }
-body .row .col-md-12, html .row .col-md-12 {
+body .row .col-md-12 {
   padding: 0;
 }
-body .row .col-md-12 .jumbotron, html .row .col-md-12 .jumbotron {
+body .row .col-md-12 .jumbotron {
   width: 100%;
 }
-body .row .col-md-12 .jumbotron header, html .row .col-md-12 .jumbotron header {
-  width: 1890px;
+body .row .col-md-12 .jumbotron header {
+  min-width: 1920px;
+  width: 100%;
   height: 80px;
   background-color: #302B3A;
   display: flex;
   justify-content: space-between;
 }
-body .row .col-md-12 .jumbotron header .left_menu, html .row .col-md-12 .jumbotron header .left_menu {
+body .row .col-md-12 .jumbotron header .left_menu {
   display: flex;
   gap: 186px;
 }
-body .row .col-md-12 .jumbotron header .left_menu .menu_btn, html .row .col-md-12 .jumbotron header .left_menu .menu_btn {
+body .row .col-md-12 .jumbotron header .left_menu .menu_btn {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-body .row .col-md-12 .jumbotron header .left_menu .menu_btn .btn, html .row .col-md-12 .jumbotron header .left_menu .menu_btn .btn {
-  font-size: 1.25em;
+body .row .col-md-12 .jumbotron header .left_menu .menu_btn .btn {
+  min-width: 125px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
   height: 100%;
   color: #FFFFFF;
   border: none;
 }
-body .row .col-md-12 .jumbotron header .left_menu .menu_btn .btn:focus, html .row .col-md-12 .jumbotron header .left_menu .menu_btn .btn:focus {
-  border: none;
+body .row .col-md-12 .jumbotron header .left_menu .menu_btn:focus {
   outline: none;
   color: #24C9E3;
 }
-body .row .col-md-12 .jumbotron header .exit_btn, html .row .col-md-12 .jumbotron header .exit_btn {
+body .row .col-md-12 .jumbotron header .exit_btn {
   display: flex;
   align-items: center;
-  margin-right: 4.63em;
+  margin-right: 58px;
 }
-body .row .col-md-12 .jumbotron main, html .row .col-md-12 .jumbotron main {
+body .row .col-md-12 .jumbotron main {
+  overflow: hidden;
   display: flex;
   justify-content: flex-start;
   white-space: nowrap;
 }
-body .row .col-md-12 .jumbotron main nav, html .row .col-md-12 .jumbotron main nav {
+body .row .col-md-12 .jumbotron main nav {
   flex: 0 0 360px;
-  float: left;
   padding: 10px;
   max-width: 360px;
   background-color: #515E7B;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  position: relative;
+  justify-content: flex-start;
 }
-body .row .col-md-12 .jumbotron main nav .newregister_btn, html .row .col-md-12 .jumbotron main nav .newregister_btn {
+body .row .col-md-12 .jumbotron main nav .newregister_btn {
   border-bottom: 1px solid #8C98B2;
-  margin: 10px 0px;
   padding-bottom: 14px;
   width: 340px;
-  display: flex;
-  justify-content: center;
 }
-body .row .col-md-12 .jumbotron main nav .newregister_btn button, html .row .col-md-12 .jumbotron main nav .newregister_btn button {
+body .row .col-md-12 .jumbotron main nav .newregister_btn button {
+  height: 44px;
+  font-size: 18px;
+  font-weight: Medium;
   width: 340px;
   padding: 0.5rem;
-  background: #0888F8 0% 0% no-repeat padding-box;
+  background: #0888F8;
   border: 0px;
   border-radius: 22px;
   color: #ffffff;
@@ -89,34 +113,41 @@ body .row .col-md-12 .jumbotron main nav .newregister_btn button, html .row .col
   align-items: center;
   text-align: center;
 }
-body .row .col-md-12 .jumbotron main nav .newregister_btn button img, html .row .col-md-12 .jumbotron main nav .newregister_btn button img {
+body .row .col-md-12 .jumbotron main nav .newregister_btn button img {
   padding-right: 0.75em;
 }
-body .row .col-md-12 .jumbotron main nav .search-container, html .row .col-md-12 .jumbotron main nav .search-container {
+body .row .col-md-12 .jumbotron main nav .search-container {
   width: 340px;
   padding: 0;
 }
-body .row .col-md-12 .jumbotron main nav .search-container .d-flex, html .row .col-md-12 .jumbotron main nav .search-container .d-flex {
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 23px 0;
   margin-left: 10px;
 }
-body .row .col-md-12 .jumbotron main nav .search-container .d-flex p, html .row .col-md-12 .jumbotron main nav .search-container .d-flex p {
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex p {
   width: 40%;
   font-size: 1.13em;
   color: #ffffff;
+  margin: 0;
 }
-body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg, html .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg {
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg {
   position: relative;
   display: flex;
   align-items: center;
 }
-body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg ::-webkit-search-cancel-button, html .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg ::-webkit-search-cancel-button {
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg ::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
-body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control, html .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control {
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control::-moz-placeholder {
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control::placeholder {
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control {
   padding: 5px 0.63em;
   margin: 0;
   padding-right: 40px;
@@ -124,94 +155,97 @@ body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .f
   width: 200px;
   height: 28px;
 }
-body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg img, html .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg img {
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg img {
   position: absolute;
   top: 8px;
   right: 11px;
   cursor: pointer;
 }
-body .row .col-md-12 .jumbotron main nav .menu-container, html .row .col-md-12 .jumbotron main nav .menu-container {
+body .row .col-md-12 .jumbotron main nav .menu_list .menu-container {
+  min-height: 670px;
   border-radius: 0px;
-  width: 21.25em;
+  width: 100%;
   overflow-y: auto;
-  height: 41.56em;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
-body .row .col-md-12 .jumbotron main nav .menu-container .menu-item, html .row .col-md-12 .jumbotron main nav .menu-container .menu-item {
+body .row .col-md-12 .jumbotron main nav .menu_list .menu-container .menu-item {
+  display: flex;
+  align-items: center;
+  height: 30px;
   width: 322px;
   border: none;
   padding: 10px;
   cursor: pointer;
+  color: #41464B;
   font-size: 0.75em;
 }
-body .row .col-md-12 .jumbotron main nav .menu-container .menu-item:hover, body .row .col-md-12 .jumbotron main nav .menu-container .menu-item.active, html .row .col-md-12 .jumbotron main nav .menu-container .menu-item:hover, html .row .col-md-12 .jumbotron main nav .menu-container .menu-item.active {
+body .row .col-md-12 .jumbotron main nav .menu_list .menu-container .menu-item:hover, body .row .col-md-12 .jumbotron main nav .menu_list .menu-container .menu-item.active {
+  color: white;
   background-color: rgba(28, 202, 214, 0.5019607843);
   border-color: rgba(28, 202, 214, 0.5019607843);
-  color: white;
 }
-body .row .col-md-12 .jumbotron main nav .menu-container::-webkit-scrollbar, html .row .col-md-12 .jumbotron main nav .menu-container::-webkit-scrollbar {
-  width: 1.13em;
+body .row .col-md-12 .jumbotron main .content {
+  flex: 1;
+  width: 100%;
+  overflow: auto;
 }
-body .row .col-md-12 .jumbotron main nav .menu-container::-webkit-scrollbar-thumb, html .row .col-md-12 .jumbotron main nav .menu-container::-webkit-scrollbar-thumb {
-  background-color: gray;
+body .row .col-md-12 .jumbotron main .content .container_box {
+  margin: 20px 20px 0px 20px;
+  width: 100%;
+  width: 1482px;
+  width: 1482px;
 }
-body .row .col-md-12 .jumbotron main nav .menu-container::-webkit-scrollbar-track, html .row .col-md-12 .jumbotron main nav .menu-container::-webkit-scrollbar-track {
-  background-color: #E3E3E3;
-}
-body .row .col-md-12 .jumbotron main nav .menu-container::-webkit-scrollbar-button, html .row .col-md-12 .jumbotron main nav .menu-container::-webkit-scrollbar-button {
-  display: none;
-}
-body .row .col-md-12 .jumbotron main .content, html .row .col-md-12 .jumbotron main .content {
-  overflow-x: auto;
-  white-space: nowrap;
-  min-width: 1500px;
-  margin: 1.25em;
-  border-bottom: 1px solid #707070;
-}
-body .row .col-md-12 .jumbotron main .content .container_header, html .row .col-md-12 .jumbotron main .content .container_header {
+body .row .col-md-12 .jumbotron main .content .container_box .container_header {
+  height: 72px;
   background-color: #24C9E3;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   margin: 0;
-  padding: 1.19em 2.13em 1.13em 1.25em;
+  padding: 1.19em 6px 1.13em 1.25em;
   border-radius: 0.31em;
 }
-body .row .col-md-12 .jumbotron main .content .container_header .txtbox, html .row .col-md-12 .jumbotron main .content .container_header .txtbox {
+body .row .col-md-12 .jumbotron main .content .container_box .container_header .txtbox {
   display: flex;
   align-items: center;
 }
-body .row .col-md-12 .jumbotron main .content .container_header .txtbox h3, html .row .col-md-12 .jumbotron main .content .container_header .txtbox h3 {
+body .row .col-md-12 .jumbotron main .content .container_box .container_header .txtbox h3 {
+  color: #302B3A;
   font-weight: bold;
   font-size: 1.5em;
   margin-right: 1.25em;
 }
-body .row .col-md-12 .jumbotron main .content .container_header .txtbox h4, html .row .col-md-12 .jumbotron main .content .container_header .txtbox h4 {
+body .row .col-md-12 .jumbotron main .content .container_box .container_header .txtbox h4 {
+  color: #302B3A;
+  font-weight: bold;
   font-size: 1.13em;
 }
-body .row .col-md-12 .jumbotron main .content .container_header .menu_btn .btn, html .row .col-md-12 .jumbotron main .content .container_header .menu_btn .btn {
+body .row .col-md-12 .jumbotron main .content .container_box .container_header .menu_btn .btn {
+  font-weight: bold;
+  font-size: 18px;
   padding: 9px 27px;
   color: #ffffff;
 }
-body .row .col-md-12 .jumbotron main .content .container_header .menu_btn .btn.active1, html .row .col-md-12 .jumbotron main .content .container_header .menu_btn .btn.active1 {
+body .row .col-md-12 .jumbotron main .content .container_box .container_header .menu_btn .btn.active1 {
   background-color: #515E7B;
 }
-body .row .col-md-12 .jumbotron main .content .container_header .menu_btn .btn:hover, html .row .col-md-12 .jumbotron main .content .container_header .menu_btn .btn:hover {
+body .row .col-md-12 .jumbotron main .content .container_box .container_header .menu_btn .btn:hover {
   background-color: #515E7B;
 }
-body .row .col-md-12 .jumbotron main .content .container_field, html .row .col-md-12 .jumbotron main .content .container_field {
-  width: 100%;
+body .row .col-md-12 .jumbotron main .content .container_box .container_field {
   padding-left: 1.25em;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form legend, html .row .col-md-12 .jumbotron main .content .container_field form legend {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form legend {
   margin: 1rem 0;
-  font-size: 1rem;
+  font-size: 18px;
+  color: #302B3A;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyTitle, html .row .col-md-12 .jumbotron main .content .container_field form .agencyTitle {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyTitle {
+  color: #302B3A;
   font-size: 18px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyTitle input, html .row .col-md-12 .jumbotron main .content .container_field form .agencyTitle input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyTitle input {
   font-size: 16px;
   width: 18.75em;
   border-radius: 0.31em;
@@ -219,16 +253,17 @@ body .row .col-md-12 .jumbotron main .content .container_field form .agencyTitle
   margin-left: 0.94em;
   padding: 3px 10px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner {
   display: flex;
   align-items: center;
   margin: 1rem 0;
   gap: 3.75em;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner p, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner p {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner p {
+  color: #302B3A;
   font-size: 18px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner p input, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner p input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner p input {
   padding: 3px 10px;
   font-size: 16px;
   border: 1px solid #707070;
@@ -236,43 +271,47 @@ body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner
   margin: 0 0.2rem;
   height: 1.88em;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner p:nth-of-type(1) input, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner p:nth-of-type(1) input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner p:nth-of-type(1) input {
   margin-left: 0.94em;
   width: 7.5em;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner p:nth-of-type(2) input, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner p:nth-of-type(2) input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner p:nth-of-type(2) input {
   margin-left: 1.13em;
   width: 160px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm {
   display: flex;
   align-items: center;
   font-size: 18px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm p input, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm p input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p {
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p input {
   padding: 3px 10px;
   font-size: 16px;
   border-radius: 5px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm p:nth-of-type(1) input, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm p:nth-of-type(1) input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p:nth-of-type(1) input {
   width: 80px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm p:nth-of-type(2) input, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm p:nth-of-type(2) input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p:nth-of-type(2) input {
   margin-left: 4px;
   width: 300px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm p:nth-of-type(3) input, html .row .col-md-12 .jumbotron main .content .container_field form .agencyOwner .addressForm p:nth-of-type(3) input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p:nth-of-type(3) input {
   width: 380px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .manager, html .row .col-md-12 .jumbotron main .content .container_field form .manager {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager {
   display: flex;
   align-items: center;
   gap: 60px;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .manager p, html .row .col-md-12 .jumbotron main .content .container_field form .manager p {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager p {
   font-size: 18px;
+  color: #302B3A;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .manager p input, html .row .col-md-12 .jumbotron main .content .container_field form .manager p input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager p input {
   padding: 3px 10px;
   font-size: 16px;
   border: 1px solid #707070;
@@ -280,24 +319,31 @@ body .row .col-md-12 .jumbotron main .content .container_field form .manager p i
   margin: 0 0.2rem;
   height: 1.88em;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .manager p:nth-of-type(1) input, html .row .col-md-12 .jumbotron main .content .container_field form .manager p:nth-of-type(1) input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager p:nth-of-type(1) input {
   margin-left: 1.94em;
   width: 7.5em;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .manager p:nth-of-type(2) input, html .row .col-md-12 .jumbotron main .content .container_field form .manager p:nth-of-type(2) input {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager p:nth-of-type(2) input {
   margin-left: 1.13em;
   width: 10em;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .manager .email, html .row .col-md-12 .jumbotron main .content .container_field form .manager .email {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager .email {
+  color: #302B3A;
   font-size: 18px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-body .row .col-md-12 .jumbotron main .content .container_field form .manager .email input, body .row .col-md-12 .jumbotron main .content .container_field form .manager .email select, html .row .col-md-12 .jumbotron main .content .container_field form .manager .email input, html .row .col-md-12 .jumbotron main .content .container_field form .manager .email select {
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager .email input, body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager .email select {
   font-size: 16px;
   padding: 3px 10px;
   width: 240px;
   border-radius: 5px;
   border: 1px solid #707070;
+}
+body .row .col-md-12 .jumbotron main .content .container_box hr {
+  transform: translateY(450px);
+  background: #707070;
+  height: 1px;
+  border: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
     const menuContainer = document.getElementById('menuContainer');
     const buttons = document.querySelectorAll('.menu_btn .btn');
-    const domainInput = document.getElementById('domainInput');
-    const domainSelect  = document.getElementById('domainSelect');
+    
 
     // 검색 기능
     function searchItems() {
@@ -28,7 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active1');
         });
     });
-    
+
+
+    // 메뉴 컨테이너 높이 조정 함수
+    function adjustMenuContainerHeight() {
+        const windowHeight = window.innerHeight;
+        menuContainer.style.height = (windowHeight - 233) + 'px'; 
+    }
+    // 윈도우 리사이즈 이벤트 리스너 추가
+    window.addEventListener('resize', adjustMenuContainerHeight);
+    // 초기 높이 설정
+    adjustMenuContainerHeight();
+
     // 메뉴 아이템 클릭 이벤트
     menuContainer.addEventListener('click', function(e) {
         if (e.target && e.target.matches('.menu-item')) {
@@ -43,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const mainContent = document.getElementById('mainContent');
             mainContent.innerHTML = `
+                     <div class="container_box">
                         <div class="container_header">
                             <div class="txtbox">
                                 <h3>${selectedItem.textContent}</h3> 
@@ -79,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                             </form>
                         </div>
+                    </div>
             `;
             const newButtons = mainContent.querySelectorAll('.btn');
             newButtons.forEach(button => {
@@ -90,18 +102,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    //email
     
-    domainSelect.addEventListener('change', function() {
-        let selectedOption = domainSelect.value;
-        if (selectedOption === 'direct') {
-            domainInput.value = ''; 
-            domainInput.readOnly = false; 
-        } else {
-            domainInput.value = '';
-            domainInput.value += selectedOption; 
-            domainInput.readOnly = true; 
-        }
-    });
-    domainInput.readOnly = true; 
 });
+// document.documentElement.style.overflow = 'hidden';
+
+/* email
+const domainInput = document.getElementById('domainInput');
+const domainSelect  = document.getElementById('domainSelect');
+
+domainSelect.addEventListener('change', function() {
+    let selectedOption = domainSelect.value;
+    if (selectedOption === 'direct') {
+        domainInput.value = ''; 
+        domainInput.readOnly = false; 
+    } else {
+        domainInput.value = '';
+        domainInput.value += selectedOption; 
+        domainInput.readOnly = true; 
+    }
+});
+domainInput.readOnly = true;  */

@@ -3,9 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
 }
 body,html{
-    font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
     box-sizing: border-box;
 }
@@ -220,7 +220,7 @@ body{
                                 } 
                                 .menu_btn{
                                     .btn{
-                                        font-weight: bold;
+                                        font-weight:600;
                                         font-size: 18px;
                                         padding: 9px 27px;
                                         color: #ffffff;

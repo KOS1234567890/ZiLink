@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../zilink/css/Invoicestyle.css">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container_modal">
+        <div class="main_cont">
+            <header class="title">
+                <div class="header">
+                    <div class="header_txt">
+                        <p>배분 시뮬레이션</p>
+                    </div>
+                    <button class="header_img">
+                        <img src="../../zilink/assets/img/btn_close.svg" alt="">
+                    </button>
+                </div>
+            </header>
+            <div class="container">
+                <div class="left_container">
+                    <div class="contents_header">
+                        <div class="ch_txt">
+                            <p>INVOICE</p>
+                        </div>
+                        <div class="ch_btn">
+                            <button>인쇄</button>
+                        </div>
+                    </div>
+                    <div class="scroll-content">
+                        <div class="detail_content">
+                            <div class="contents">
+                                <ul class="ul1">
+                                    <li>대리점명 : 씨티씨인슈</li>
+                                    <li>Invoice No. : INV240522-CTC038a</li>
+                                </ul>
+                                <ul class="ul2">
+                                    <li>주소 : 서울 중구 소월로2길 30 (남대문로5가)T타워 4층</li>
+                                    <li>발행일 : 2024년 5월 22일</li>
+                                </ul>
+                                <ul class="ul3">
+                                    <li>담당 : 길해균 대리</li>
+                                    <li>전화번호 : 010-8699-4814</li>
+                                </ul>
+                                <div class="div_p">
+                                    <p>이메일 : khg4323@ctechcom.co.kr, icpark24@ctechcom.co.kr</p>
+                                </div>
+                            </div>
+                            <div class="tables">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                          <th scope="col">항목</th> <!-- width 105 -->
+                                          <th scope="col">내역</th>
+                                          <th scope="col">기간</th>
+                                          <th scope="col">단기</th>
+                                          <th scope="col">수량</th>
+                                          <th scope="col">합계</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tr1">
+                                          <td rowspan="4">1.ASP</td>
+                                          <td>[ASP 좌석 사용비] (당월 사용분) 서울</td>
+                                          <td>당월</td>
+                                          <td>60,000 원</td>
+                                          <td>21</td>
+                                          <td class="right_td">1,260,000 원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>[ASP 좌석 사용비] (당월 사용분) 수유</td>
+                                            <td>당월</td>
+                                            <td>60,000 원</td>
+                                            <td>35</td>
+                                            <td class="right_td">2,100,000 원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>[ASP 좌석 사용비] (당월 사용분) 대전</td>
+                                            <td>당월</td>
+                                            <td>60,000 원</td>
+                                            <td>30</td>
+                                            <td class="right_td">1,800,000 원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>[ASP 보정 좌석 수] (최소 100석 유지)</td>
+                                            <td>당월</td>
+                                            <td>60,000 원</td>
+                                            <td>14</td>
+                                            <td class="right_td">840,000 원</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="tr1 ">
+                                            <td rowspan="4">2.통신비</td>
+                                            <td>유선통신료 기본료 : 28,000원,부가사용료 : 0원,</td>
+                                            <td rowspan="3">전월</td>
+                                            <td rowspan="3"></td>
+                                            <td rowspan="3">14</td>
+                                            <td class="right_td" rowspan="3">64,377 원</td>
+                                        </tr>
+                                        <tr class="cost2">
+                                            <td> 시내/시외통화료 : 4,370원, 이동전화통화료 : 32,007원,</td>
+                                        </tr>
+                                        <tr class="cost2">
+                                            <td> 국제전화료 : 0원, 할인률 : 0%, 할인액 : 0원</td>
+                                        </tr>
+                                        <tr class="tr2 ">
+                                            <td>모바일통신료 : 월정액+국내전화통화료+단말기할부금+기타(KT사용료)</td>
+                                            <td>전월</td>
+                                            <td></td>
+                                            <td>152</td>
+                                            <td class="right_td">7,228,650 원</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="tr1">
+                                            <td>3. MDM</td>
+                                            <td>[ASP 사용비] (전월 사용분) 신한(121)</td>
+                                            <td>당월</td>
+                                            <td>3,000 원</td>
+                                            <td>121</td>
+                                            <td class="right_td">363,000 원</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="tr1">
+                                            <td>4. ZiBox</td>
+                                            <td>[ASP 사용비] (당월 사용분) 서울/수유/대전</td>
+                                            <td>당월</td>
+                                            <td>10,000 원</td>
+                                            <td>86</td>
+                                            <td class="right_td">860,000 원</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="tr1">
+                                            <td rowspan="2">5. 방화벽</td>
+                                            <td>씨티씨인슈 : 방화벽(SSG-140) 대전 2대, 서울2대, 수유 2대</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="right_td">300,000 원</td>
+                                        </tr>
+                                        <tr class="tr2">
+                                            <td>제주워케이션 : 방화벽(Fortigate 60D) 서울1대, 제주2대 #일시정시(미회수)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="tr1">
+                                            <td rowspan="6">6. 기타</td>
+                                            <td>* KT 오피스IP넷 (대전)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="right_td">1,260,000 원</td>
+                                        </tr>
+                                        <tr class="tr2">
+                                            <td>* LGU+ 오피스넷 (512105572951) (수유)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="right_td">2,100,000 원</td>
+                                        </tr>
+                                        <tr class="tr2">
+                                            <td>* LGU+ 오피스넷 (571803527146) (대전)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="right_td">1,800,000 원</td>
+                                        </tr>
+                                        <tr class="tr2">
+                                            <td>* SKB 비즈광랜 기업인터넷</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="right_td">840,000 원</td>
+                                        </tr>
+                                        <tr class="tr2">
+                                            <td>* LGU+ 오피스넷 (572204807283) (신규/T타워)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="right_td">1,800,000 원</td>
+                                        </tr>
+                                        <tr class="tr2">
+                                            <td>* BC카드向 지폰X 구매(350,000 -> 250,000 D.C)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="right_td">840,000 원</td>
+                                        </tr>
+                                    </tbody>
+            
+                                  </table>
+                            </div>
+                            <div class="table_undercontent">
+                                <div class="account_left">
+                                    <p>입금계좌 : 신한은행 140-011-035195 예금주:아이알링크(주) </p>
+                                    <p>청구일 : 매월 25일~31일 / 결제일 : 청구 당월 말일 </p>
+                                    <p>영수증 : 결제 확인 후 즉시 세금계산서(영수) 발행 </p>
+                                    <p>보증보험증권 미발행으로 당월 청구 / 당월 결제 원칙 </p>
+                                    <p>당월 결제 미납시 연체료 발생 (연체율 : 2.5%)</p>
+                                </div>
+                                <div class="account_right">
+                                    <div class="ul_list">
+                                        <ul>
+                                            <li>공급가액</li>
+                                            <li>15,943,197 원</li>
+                                        </ul>
+                                        <ul>
+                                            <li>부가세</li>
+                                            <li>1,594,320 원</li>
+                                        </ul>
+                                        <ul>
+                                            <li class="font_semibold">소계(원단위절사)</li>
+                                            <li class="font_semibold">17,537,510 원</li>
+                                        </ul>
+                                        <ul>
+                                            <li>전월미납금</li>
+                                            <li>0 원</li>
+                                        </ul>
+                                        <ul>
+                                            <li>부가세</li>
+                                            <li>0 원</li>
+                                        </ul>
+                                        <ul>
+                                            <li>미납연체료</li>
+                                            <li>0 원</li>
+                                        </ul>
+                                        <ul>
+                                            <li class="font_semibold">소계</li>
+                                            <li class="font_semibold">0 원</li>
+                                        </ul>
+                                        <ul>
+                                            <li class="font_semibold">총계</li>
+                                            <li class="font_semibold">17,537,510 원</li>
+                                        </ul>
+                                        <ul class="marginul1">
+                                            <li>연체시</li>
+                                            <li>17,936,090 원</li>
+                                        </ul>
+                                    </div>
+                                    <div class = "account_detail">
+                                        <p>아이알링크(주)</p>
+                                        <ul>
+                                            <li>주소 : 서울시 성동구 성수동2가 308-4 서울숲코오롱디지털타워 13층</li>
+                                        </ul>
+                                        <ul>
+                                            <li>대표자명 : 김 광 원</li>
+                                            <li class="marginli1">사업자등록번호 : 215-81-86064</li>
+                                        </ul>
+                                        <ul>
+                                            <li>전화 : 02-6905-2800</li>
+                                            <li class="marginli2">팩스 : 02-6905-2801</li>
+                                            <img src="../zilink/assets/img/icons Q2.svg" alt="">
+                                        </ul>
+                                        <ul>
+                                            <li>담당 : 박 은 석 부장 (010-9268-9781)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

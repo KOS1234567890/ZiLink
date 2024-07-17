@@ -2,16 +2,30 @@
 *, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p, button, span {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
 }
 
 body, html {
   font-optical-sizing: auto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input::-webkit-input-placeholder {
+  color: #41464B;
 }
 
 input::-moz-placeholder {
+  color: #41464B;
+}
+
+input:-ms-input-placeholder {
+  color: #41464B;
+}
+
+input::-ms-input-placeholder {
   color: #41464B;
 }
 
@@ -45,16 +59,26 @@ body .row .col-md-12 .jumbotron header {
   width: 100%;
   height: 80px;
   background-color: #302B3A;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 body .row .col-md-12 .jumbotron header .left_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 186px;
 }
 body .row .col-md-12 .jumbotron header .left_menu .menu_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 40px;
 }
 body .row .col-md-12 .jumbotron header .left_menu .menu_btn .btn {
@@ -71,27 +95,44 @@ body .row .col-md-12 .jumbotron header .left_menu .menu_btn:focus {
   color: #24C9E3;
 }
 body .row .col-md-12 .jumbotron header .exit_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 58px;
 }
 body .row .col-md-12 .jumbotron main {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   white-space: nowrap;
 }
 body .row .col-md-12 .jumbotron main nav {
-  flex: 0 0 360px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 360px;
+          flex: 0 0 360px;
   padding: 10px;
   max-width: 360px;
   background-color: #515E7B;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   position: relative;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 body .row .col-md-12 .jumbotron main nav .newregister_btn {
   border-bottom: 1px solid #8C98B2;
@@ -108,9 +149,15 @@ body .row .col-md-12 .jumbotron main nav .newregister_btn button {
   border: 0px;
   border-radius: 22px;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 body .row .col-md-12 .jumbotron main nav .newregister_btn button img {
@@ -121,9 +168,15 @@ body .row .col-md-12 .jumbotron main nav .search-container {
   padding: 0;
 }
 body .row .col-md-12 .jumbotron main nav .search-container .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 23px 0;
   margin-left: 10px;
 }
@@ -135,13 +188,26 @@ body .row .col-md-12 .jumbotron main nav .search-container .d-flex p {
 }
 body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg ::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control::-webkit-input-placeholder {
+  color: #41464B;
+}
 body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control::-moz-placeholder {
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control:-ms-input-placeholder {
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control::-ms-input-placeholder {
   color: #41464B;
 }
 body .row .col-md-12 .jumbotron main nav .search-container .d-flex .searchimg .form-control::placeholder {
@@ -167,11 +233,16 @@ body .row .col-md-12 .jumbotron main nav .menu_list .menu-container {
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 body .row .col-md-12 .jumbotron main nav .menu_list .menu-container .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 30px;
   width: 322px;
   border: none;
@@ -186,7 +257,9 @@ body .row .col-md-12 .jumbotron main nav .menu_list .menu-container .menu-item:h
   border-color: rgba(28, 202, 214, 0.5019607843);
 }
 body .row .col-md-12 .jumbotron main .content {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
   overflow: auto;
 }
@@ -199,16 +272,26 @@ body .row .col-md-12 .jumbotron main .content .container_box {
 body .row .col-md-12 .jumbotron main .content .container_box .container_header {
   height: 72px;
   background-color: #24C9E3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0;
   padding: 1.19em 6px 1.13em 1.25em;
   border-radius: 0.31em;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_header .txtbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_header .txtbox h3 {
   color: #302B3A;
@@ -254,8 +337,12 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_field fo
   padding: 3px 10px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem 0;
   gap: 3.75em;
 }
@@ -280,8 +367,12 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_field fo
   width: 160px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p {
@@ -303,8 +394,12 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_field fo
   width: 380px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 60px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager p {
@@ -330,8 +425,12 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_field fo
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager .email {
   color: #302B3A;
   font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.5rem;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager .email input, body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager .email select {
@@ -342,8 +441,9 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_field fo
   border: 1px solid #707070;
 }
 body .row .col-md-12 .jumbotron main .content .container_box hr {
-  transform: translateY(450px);
+  -webkit-transform: translateY(450px);
+          transform: translateY(450px);
   background: #707070;
   height: 1px;
   border: 0;
-}/*# sourceMappingURL=style.css.map */
+}

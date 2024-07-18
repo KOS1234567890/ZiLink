@@ -12,6 +12,7 @@
 body {
   width: 100%;
   overflow: hidden;
+  overflow-x: auto;
 }
 
 .container_modal {
@@ -20,7 +21,6 @@ body {
   overflow-y: hidden;
   border: 1px solid #6d4a4a;
   background-color: #ffffff;
-  overflow-x: auto;
 }
 .container_modal .main_cont {
   width: 972px;

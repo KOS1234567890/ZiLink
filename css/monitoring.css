@@ -1,0 +1,341 @@
+*, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p, button, span, table, td, th, tr, label, select, option {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #41464B;
+}
+
+body {
+  width: 100%;
+}
+
+.monitoring_main .monitoring_header {
+  padding: 12px 0 14px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52px;
+  min-width: 1000px;
+  width: 100%;
+  border-bottom: 1px solid #A4AFB9;
+}
+.monitoring_main .monitoring_header .monitoring_title p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.monitoring_main .monitoring_header .header-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.monitoring_main .monitoring_header .header-select .header-center, .monitoring_main .monitoring_header .header-select .header-team {
+  margin-left: 30px;
+}
+.monitoring_main .monitoring_header .header-select .header-center label, .monitoring_main .monitoring_header .header-select .header-team label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+.monitoring_main .monitoring_header .header-select .header-center select, .monitoring_main .monitoring_header .header-select .header-team select {
+  width: 200px;
+  height: 28px;
+  padding: 3px 59px 4px 10px;
+  border: 1px solid #8F959E;
+  border-radius: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../../zilink/assets/img/fi-rr-caret-down.svg") right 10px center no-repeat;
+}
+.monitoring_main .monitoring_header .header-select .header-center select option, .monitoring_main .monitoring_header .header-select .header-team select option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  color: #484848;
+  letter-spacing: -0.33px;
+}
+.monitoring_main .monitoring_box {
+  padding: 12px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.monitoring_main .monitoring_box .offline {
+  border: 1px solid #8F959E;
+  border-radius: 5px;
+  height: 102px;
+  width: 259px;
+  padding: 8px;
+}
+.monitoring_main .monitoring_box .offline .offline_line {
+  border-top: 5px solid #8F959E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px;
+}
+.monitoring_main .monitoring_box .offline .offline_line .off_txt {
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+.monitoring_main .monitoring_box .offline .offline_line .off_txt p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.monitoring_main .monitoring_box .offline .offline_line .off_txt p:nth-of-type(2) {
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .offline .offline_line .off_situation p {
+  color: #8F959E;
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .connect {
+  border: 1px solid #8F959E;
+  border-radius: 5px;
+  height: 102px;
+  width: 259px;
+  padding: 8px;
+}
+.monitoring_main .monitoring_box .connect .connect_line {
+  border-top: 5px solid #3EBFE8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 12px 9px 12px;
+}
+.monitoring_main .monitoring_box .connect .connect_line .con_txt {
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+.monitoring_main .monitoring_box .connect .connect_line .con_txt p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.monitoring_main .monitoring_box .connect .connect_line .con_txt p:nth-of-type(2) {
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .connect .connect_line .con_situation p {
+  color: #3EBFE8;
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .connect .connect_line_under {
+  margin-left: 12px;
+}
+.monitoring_main .monitoring_box .connect .connect_line_under p {
+  font-size: 12px;
+  font-weight: bold;
+  color: #7B8594;
+}
+.monitoring_main .monitoring_box .connect_call {
+  border: 1px solid #8F959E;
+  border-radius: 5px;
+  height: 102px;
+  width: 259px;
+  padding: 8px;
+}
+.monitoring_main .monitoring_box .connect_call .connect_call_line {
+  border-top: 5px solid #3EBFE8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 12px 9px 12px;
+}
+.monitoring_main .monitoring_box .connect_call .connect_call_line .call_txt {
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+.monitoring_main .monitoring_box .connect_call .connect_call_line .call_txt p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.monitoring_main .monitoring_box .connect_call .connect_call_line .call_txt p:nth-of-type(2) {
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .connect_call .connect_call_line .call_situation p {
+  color: #3EBFE8;
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .connect_call .connect_call_under {
+  margin-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.monitoring_main .monitoring_box .connect_call .connect_call_under .call_txt p {
+  font-size: 12px;
+  font-weight: bold;
+  color: #3E79D2;
+}
+.monitoring_main .monitoring_box .connect_call .connect_call_under .call_btn {
+  margin-right: 7px;
+}
+.monitoring_main .monitoring_box .connect_call .connect_call_under .call_btn button {
+  font-family: "Nanum Barun Gothic", sans-serif;
+  width: 72px;
+  height: 26px;
+  background-color: #3E79D2;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+}
+.monitoring_main .monitoring_box .End_interception {
+  border: 1px solid #8F959E;
+  border-radius: 5px;
+  height: 102px;
+  width: 259px;
+  padding: 8px;
+}
+.monitoring_main .monitoring_box .End_interception .End_interception_line {
+  border-top: 5px solid #3EBFE8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 12px 9px 12px;
+}
+.monitoring_main .monitoring_box .End_interception .End_interception_line .end_txt {
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+.monitoring_main .monitoring_box .End_interception .End_interception_line .end_txt p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.monitoring_main .monitoring_box .End_interception .End_interception_line .end_txt p:nth-of-type(2) {
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .End_interception .End_interception_line .end_situation p {
+  color: #3EBFE8;
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .End_interception .End_interception_under {
+  margin-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.monitoring_main .monitoring_box .End_interception .End_interception_under .end_txt p {
+  font-size: 12px;
+  font-weight: bold;
+  color: #3E79D2;
+}
+.monitoring_main .monitoring_box .End_interception .End_interception_under .end_btn {
+  margin-right: 7px;
+}
+.monitoring_main .monitoring_box .End_interception .End_interception_under .end_btn button {
+  font-family: "Nanum Barun Gothic", sans-serif;
+  width: 72px;
+  height: 26px;
+  background-color: #FF6D6D;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+}
+.monitoring_main .monitoring_box .Away {
+  border: 1px solid #8F959E;
+  border-radius: 5px;
+  height: 102px;
+  width: 259px;
+  padding: 8px;
+}
+.monitoring_main .monitoring_box .Away .Away_line {
+  border-top: 5px solid #3EBFE8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 12px 9px 12px;
+}
+.monitoring_main .monitoring_box .Away .Away_line .away_txt {
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+.monitoring_main .monitoring_box .Away .Away_line .away_txt p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.monitoring_main .monitoring_box .Away .Away_line .away_txt p:nth-of-type(2) {
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .Away .Away_line .away_situation p {
+  color: #3EBFE8;
+  font-size: 12px;
+}
+.monitoring_main .monitoring_box .Away .Away_under {
+  margin-left: 12px;
+}
+.monitoring_main .monitoring_box .Away .Away_under .away_txt p {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFB300;
+}

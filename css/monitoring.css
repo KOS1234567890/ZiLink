@@ -21,7 +21,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 52px;
-  min-width: 1000px;
+  min-width: 700px;
   width: 100%;
   border-bottom: 1px solid #A4AFB9;
 }
@@ -65,6 +65,7 @@ body {
   letter-spacing: -0.33px;
 }
 .monitoring_main .monitoring_box {
+  min-width: 700PX;
   padding: 12px 20px;
   display: -webkit-box;
   display: -ms-flexbox;

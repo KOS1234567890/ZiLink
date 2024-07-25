@@ -1,48 +1,15 @@
 @charset "UTF-8";
-*, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p, button, span {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-body, html {
-  font-optical-sizing: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-input::-webkit-input-placeholder {
-  color: #41464B;
-}
-
-input::-moz-placeholder {
-  color: #41464B;
-}
-
-input:-ms-input-placeholder {
-  color: #41464B;
-}
-
-input::-ms-input-placeholder {
-  color: #41464B;
-}
-
-input::placeholder {
-  color: #41464B;
-}
-
 html, nav {
   scrollbar-width: none;
 }
 
-body::-webkit-scrollbar {
-  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+.active {
+  background-color: rgba(28, 202, 214, 0.5019607843);
+  border-color: rgba(28, 202, 214, 0.5019607843);
 }
 
 body {
-  overflow: none;
+  overflow-y: hidden;
 }
 body .row {
   display: block;
@@ -85,7 +52,7 @@ body .row .col-md-12 .jumbotron header .left_menu .menu_btn .btn {
   min-width: 125px;
   width: 100%;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   height: 100%;
   color: #FFFFFF;
   border: none;
@@ -104,6 +71,7 @@ body .row .col-md-12 .jumbotron header .exit_btn {
   margin-right: 58px;
 }
 body .row .col-md-12 .jumbotron main {
+  height: 1000px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,6 +225,7 @@ body .row .col-md-12 .jumbotron main nav .menu_list .menu-container .menu-item:h
   border-color: rgba(28, 202, 214, 0.5019607843);
 }
 body .row .col-md-12 .jumbotron main .content {
+  height: 91.5vh;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -266,7 +235,6 @@ body .row .col-md-12 .jumbotron main .content {
 body .row .col-md-12 .jumbotron main .content .container_box {
   margin: 20px 20px 0px 20px;
   width: 100%;
-  width: 1482px;
   width: 1482px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_header {
@@ -278,14 +246,12 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0;
   padding: 1.19em 6px 1.13em 1.25em;
   border-radius: 0.31em;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_header .txtbox {
+  min-width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,66 +271,109 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_header .
   font-size: 1.13em;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_header .menu_btn .btn {
-  font-weight: 600;
+  width: 120px;
+  height: 44px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 9px 10px;
+  font-weight: 500;
   font-size: 18px;
-  padding: 9px 27px;
   color: #ffffff;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_header .menu_btn .btn.active1 {
+  border: 0px;
   background-color: #515E7B;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_header .menu_btn .btn:hover {
+  border: 0px;
   background-color: #515E7B;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field {
   padding-left: 1.25em;
+  margin-bottom: 50px;
 }
-body .row .col-md-12 .jumbotron main .content .container_box .container_field form legend {
-  margin: 1rem 0;
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agency_Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 2px solid #425571;
+  margin-bottom: 12px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agency_Info legend {
+  margin: 20px 0;
   font-size: 18px;
   color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agency_Info legend span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agency_Info button {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #425571;
+  border-radius: 5px;
+  width: 80px;
+  height: 28px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyTitle {
   color: #302B3A;
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: 600;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyTitle input {
-  font-size: 16px;
-  width: 18.75em;
+  padding-left: 92px;
+  font-size: 13px;
+  width: 240px;
   border-radius: 0.31em;
   border: 1px solid #707070;
-  margin-left: 0.94em;
+  margin-left: 92px;
   padding: 3px 10px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 1rem 0;
-  gap: 3.75em;
+  gap: 20px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner p {
   color: #302B3A;
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: 600;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner p input {
+  padding-left: 116px;
   padding: 3px 10px;
-  font-size: 16px;
+  font-size: 13px;
   border: 1px solid #707070;
   border-radius: 0.31em;
   margin: 0 0.2rem;
   height: 1.88em;
+  width: 160px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner p:nth-of-type(1) input {
-  margin-left: 0.94em;
-  width: 7.5em;
+  margin-left: 92px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner p:nth-of-type(2) input {
-  margin-left: 1.13em;
-  width: 160px;
+  margin-left: 92px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm {
   display: -webkit-box;
@@ -373,15 +382,20 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_field fo
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: 600;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p {
   color: #302B3A;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p input {
+  height: 26px;
   padding: 3px 10px;
-  font-size: 16px;
+  font-size: 13px;
   border-radius: 5px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p:nth-of-type(1) {
+  margin-left: 27px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p:nth-of-type(1) input {
   width: 80px;
@@ -392,6 +406,202 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_field fo
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .addressForm p:nth-of-type(3) input {
   width: 380px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .email {
+  color: #302B3A;
+  font-size: 13px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .email input {
+  height: 26px;
+  font-size: 13px;
+  padding: 3px 10px;
+  width: 240px;
+  border-radius: 5px;
+  border: 1px solid #707070;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .email input:nth-of-type(1) {
+  margin-left: 46px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .service label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .agencyOwner .service select {
+  height: 26px;
+  width: 160px;
+  border-radius: 5px;
+  padding: 2px 10px 5px 7px;
+  color: #484848;
+  font-size: 13px;
+  letter-spacing: -0.33px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  border-top: 1px solid #8F959E;
+  border-bottom: 1px solid #8F959E;
+  padding: 14px 0 17px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 92px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center p {
+  color: #41464B;
+  font-size: 13px;
+  font-weight: 600;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center .center_checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center .center_checkbox input#check {
+  display: none;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center .center_checkbox input#check, body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center .center_checkbox label {
+  cursor: pointer;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center .center_checkbox input#check span, body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center .center_checkbox label span {
+  vertical-align: middle;
+  padding-left: 10px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center .center_checkbox input#check + label::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #8F959E;
+  vertical-align: middle;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center .center_checkbox input#check:checked + label::before {
+  content: "";
+  background-color: #ffffff;
+  background-image: url("../../zilink/assets/img/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .center .center_checkbox label span {
+  font-size: 13px;
+  color: #484848;
+  letter-spacing: -0.33px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .recording_date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .recording_date p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .recording_date .recording_date_num {
+  position: relative;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .recording_date .recording_date_num input {
+  width: 80px;
+  height: 26px;
+  padding: 3px 10px;
+  padding-right: 40px;
+  font-size: 13px;
+  color: #484848;
+  letter-spacing: -0.33px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .recording_date .recording_date_num label {
+  font-size: 13px;
+  letter-spacing: -0.33px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+  color: #484848;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .pickup_code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 92px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .pickup_code p {
+  color: #41464B;
+  font-size: 13px;
+  font-weight: 600;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .pickup_code .pickup select {
+  width: 80px;
+  height: 26px;
+  color: #484848;
+  font-size: 13px;
+  padding: 3px 10px 3px 5px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .stop_recording {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .stop_recording p {
+  color: #41464B;
+  font-size: 13px;
+  font-weight: 600;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field form .center_transcription .stop_recording .stop_record_btn input {
+  border: 1px solid #8F959E;
+  border-radius: 5px;
+  width: 120px;
+  height: 26px;
+  padding: 3px 10px;
+  font-size: 13px;
+  color: #484848;
 }
 body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager {
   display: -webkit-box;
@@ -422,23 +632,621 @@ body .row .col-md-12 .jumbotron main .content .container_box .container_field fo
   margin-left: 1.13em;
   width: 10em;
 }
-body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager .email {
-  color: #302B3A;
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list {
+  width: 560px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listtitle {
+  margin: 20px 0;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listtitle p {
+  font-weight: bold;
   font-size: 18px;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail {
+  height: 775px;
+  width: 560px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxheader {
+  list-style: none;
+  background-color: #7B8594;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxheader ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.5rem;
 }
-body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager .email input, body .row .col-md-12 .jumbotron main .content .container_box .container_field form .manager .email select {
-  font-size: 16px;
-  padding: 3px 10px;
-  width: 240px;
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxheader ul li {
+  list-style: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxheader ul li:nth-of-type(1) {
+  width: 43px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxheader ul li:nth-of-type(2) {
+  width: 270px;
+  border-right: 1px solid #E1E6EC;
+  border-left: 1px solid #E1E6EC;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxheader ul li:nth-of-type(3) {
+  width: 244px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxcontent {
+  list-style: none;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxcontent ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxcontent ul li {
+  border-bottom: 1px solid #8F959E;
+  color: #484848;
+  font-size: 13px;
+  letter-spacing: -0.33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 7px;
+  cursor: pointer;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxcontent ul li:nth-of-type(1) {
+  width: 43px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxcontent ul li:nth-of-type(2) {
+  width: 270px;
+  border-right: 1px solid #E1E6EC;
+  border-left: 1px solid #E1E6EC;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_list .center_listbox .center_listboxdetail .center_listboxcontent ul li:nth-of-type(3) {
+  width: 244px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item {
+  width: 862px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maintitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maintitle p {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maintitle button {
+  border: 0px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #425571;
+  padding: 5px 15px 6px;
   border-radius: 5px;
-  border: 1px solid #707070;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  padding: 9px 0 12px;
+  border-top: 2px solid #425571;
+  border-bottom: 2px solid #425571;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 104px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_name p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_name input {
+  width: 332px;
+  height: 26px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+  padding: 6px 96px 6px 10px;
+  font-size: 13px;
+  color: #484848;
+  letter-spacing: -0.33px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_recordRetentionDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_recordRetentionDate p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_recordRetentionDate .recording_date_num {
+  position: relative;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_recordRetentionDate .recording_date_num input {
+  width: 80px;
+  height: 26px;
+  padding: 3px 10px;
+  padding-right: 40px;
+  font-size: 13px;
+  color: #484848;
+  letter-spacing: -0.33px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_recordRetentionDate .recording_date_num label {
+  font-size: 13px;
+  letter-spacing: -0.33px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+  color: #484848;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_pickupCode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 92px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_pickupCode p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_pickupCode .pickup select {
+  width: 80px;
+  height: 26px;
+  color: #484848;
+  font-size: 13px;
+  padding: 3px 10px 3px 5px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_record_stopbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_record_stopbutton p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #41464B;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .center_item_info .center_item_maindetail .center_record_stopbutton .stop_record_btn input {
+  border: 1px solid #8F959E;
+  border-radius: 5px;
+  width: 120px;
+  height: 26px;
+  padding: 3px 10px;
+  font-size: 13px;
+  color: #484848;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_title p {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 120px;
+  border-top: 1px solid #8F959E;
+  border-bottom: 2px solid #425571;
+  padding: 14px 0 17px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .ftp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .ftp p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .ftp .ftp_inter input {
+  width: 200px;
+  font-size: 13px;
+  color: #484848;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+  padding: 3px 21px 3px 10px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .recording_detail_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .recording_detail_1 p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #41464B;
+  letter-spacing: -0.33px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .recording_detail_1 .send_status {
+  margin-left: 86px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .recording_detail_1 .send_status select {
+  width: 200px;
+  height: 26px;
+  color: #484848;
+  font-size: 13px;
+  padding: 3px 10px 3px 5px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .recording_detail_2 .ftp_inter {
+  margin-left: 47px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .recording_detail_3 .ftp_inter {
+  margin-left: 100px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .recording_detail_4 .ftp_inter {
+  margin-left: 93px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .recording_detail_5 .ftp_inter {
+  margin-left: 61px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_left .recording_detail_6 .ftp_inter {
+  margin-left: 43px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .ftp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .ftp p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .ftp .ftp_inter input {
+  width: 200px;
+  font-size: 13px;
+  color: #484848;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+  padding: 3px 21px 3px 10px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_1 p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #41464B;
+  letter-spacing: -0.33px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_1 .ftp_inter {
+  margin-left: 83px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_1 .ftp_inter input {
+  width: 200px;
+  height: 26px;
+  color: #484848;
+  font-size: 13px;
+  padding: 3px 10px 3px 5px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_2 .ftp_inter {
+  margin-left: 86px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_3 .ftp_inter {
+  margin-left: 78px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_4 .ftp_inter {
+  margin-left: 89px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_5 .ftp_inter {
+  margin-left: 62px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_6 .tell_url {
+  margin-left: 43px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .recording_send .recording_detail .recording_detail_right .recording_detail_6 .tell_url select {
+  width: 200px;
+  height: 26px;
+  color: #484848;
+  font-size: 13px;
+  padding: 3px 10px 3px 5px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info {
+  /* 흥국생명 */
+  /* 에이스화재 */
+  /* 삼성화재 */
+  /* 현대해상 */
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .insurance_transfer_title p {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8px;
+  gap: 120px;
+  border-top: 1px solid #8F959E;
+  border-bottom: 1px solid #8F959E;
+  padding: 12px 0;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_left .infos, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_right .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_left .infos p, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_right .infos p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_left .infos select, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_right .infos select {
+  margin-left: 29px;
+  width: 200px;
+  height: 26px;
+  color: #484848;
+  font-size: 13px;
+  padding: 3px 10px 3px 5px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_left .infos .heungkuk_ftp .ftp_inter input, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_right .infos .heungkuk_ftp .ftp_inter input {
+  width: 200px;
+  font-size: 13px;
+  color: #484848;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+  padding: 3px 21px 3px 10px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_left .infos:nth-of-type(1), body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_right .infos:nth-of-type(1) {
+  margin-top: 0px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_left .infos:nth-of-type(2) .heungkuk_ftp .ftp_inter input, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_left .infos:nth-of-type(3) .heungkuk_ftp .ftp_inter input {
+  margin-left: 50px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_right .infos:nth-of-type(1) .heungkuk_ftp .ftp_inter input, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_right .infos:nth-of-type(2) .heungkuk_ftp .ftp_inter input {
+  margin-left: 38px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .heungkuk .heungkuk_right .infos:nth-of-type(3) .heungkuk_ftp .ftp_inter input {
+  margin-left: 42px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 120px;
+  border-bottom: 1px solid #8F959E;
+  padding: 12px 0;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_left .infos, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_right .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_left .infos p, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_right .infos p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_left .infos select, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_right .infos select {
+  margin-left: 17px;
+  width: 200px;
+  height: 26px;
+  color: #484848;
+  font-size: 13px;
+  padding: 3px 10px 3px 5px;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_left .infos .ace_ftp .ftp_inter input, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_right .infos .ace_ftp .ftp_inter input {
+  width: 200px;
+  font-size: 13px;
+  color: #484848;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+  padding: 3px 21px 3px 10px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_left .infos:nth-of-type(1), body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_right .infos:nth-of-type(1) {
+  margin-top: 0px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_left .infos:nth-of-type(2) .ace_ftp .ftp_inter input, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_left .infos:nth-of-type(3) .ace_ftp .ftp_inter input {
+  margin-left: 37px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_right .infos:nth-of-type(1) .ace_ftp .ftp_inter input, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_right .infos:nth-of-type(2) .ace_ftp .ftp_inter input {
+  margin-left: 26px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .ace .ace_right .infos:nth-of-type(3) .ace_ftp .ftp_inter input {
+  margin-left: 30px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 120px;
+  border-bottom: 1px solid #8F959E;
+  padding: 12px 0;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_left .infos, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_right .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_left .infos p, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_right .infos p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_left .infos .samsung_ftp .ftp_inter input, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_right .infos .samsung_ftp .ftp_inter input {
+  width: 200px;
+  font-size: 13px;
+  color: #484848;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+  padding: 3px 21px 3px 10px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_left .infos:nth-of-type(1) .samsung_ftp .ftp_inter input {
+  margin-left: 41px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_left .infos:nth-of-type(2) {
+  margin-top: 8px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_left .infos:nth-of-type(2) .samsung_ftp .ftp_inter input {
+  margin-left: 16px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .samsung .samsung_right .infos:nth-of-type(1) .samsung_ftp .ftp_inter input {
+  margin-left: 29px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .hyundai {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 120px;
+  border-bottom: 1px solid #8F959E;
+  padding: 12px 0;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .hyundai .hyundai_left .infos, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .hyundai .hyundai_right .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .hyundai .hyundai_left .infos p, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .hyundai .hyundai_right .infos p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #302B3A;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .hyundai .hyundai_left .infos .hyundai_ftp .ftp_inter input, body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .hyundai .hyundai_right .infos .hyundai_ftp .ftp_inter input {
+  width: 200px;
+  font-size: 13px;
+  color: #484848;
+  border-radius: 5px;
+  border: 1px solid #8F959E;
+  padding: 3px 21px 3px 10px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .insurance_transfer_info .hyundai .hyundai_left .infos:nth-of-type(1) .hyundai_ftp .ftp_inter input {
+  margin-left: 16px;
+}
+body .row .col-md-12 .jumbotron main .content .container_box .container_field .center_detail .center_item .submit_btn input {
+  background-color: #3E79D2;
+  color: #ffffff;
+  width: 100px;
+  height: 26px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  float: right;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 0px;
 }
 body .row .col-md-12 .jumbotron main .content .container_box hr {
   -webkit-transform: translateY(450px);

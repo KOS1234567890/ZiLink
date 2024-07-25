@@ -1,30 +1,15 @@
-
-*,body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p, button,span{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Noto Sans KR", sans-serif;
-}
-body,html{
-    font-optical-sizing: auto;
-    box-sizing: border-box;
-}
-input::placeholder{
-    color: #41464B;
-}
 //모질라 , 파이어폭스 스크롤
 html,nav{
     scrollbar-width: none;
 }
-
-
-body::-webkit-scrollbar {
-    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+.active {
+    background-color: #1ccad680;
+    border-color: #1CCAD680;
 }
 
 
 body{
-    overflow: none;
+    overflow-y: hidden;
     .row{
         display: block;
         margin: 0;
@@ -55,7 +40,7 @@ body{
                                 min-width: 125px;
                                 width: 100%;
                                 font-size: 20px;
-                                font-weight: bold;
+                                font-weight: 500;
                                 height: 100%;
                                 color: #FFFFFF;
                                 border: none;
@@ -74,10 +59,12 @@ body{
                     }
                 }
                 main{
+                    height: 1000px;
                     overflow:hidden;
                     display: flex;
                     justify-content: flex-start;
                     white-space: nowrap;
+                    
                     nav{
                         flex: 0 0 360px;
                         padding: 10px;
@@ -185,25 +172,26 @@ body{
                         
                     }
                     .content{
+                        height: 91.5vh;
                         flex: 1;
                         width: 100%;
                         overflow: auto;
-                        // margin: 20px 20px 20px 20px;
                         .container_box{
                             margin: 20px 20px 0px 20px;
                             width: 100%;
-                            width: 1482px;
                             width: 1482px;
                             .container_header{
                                 height: 72px;
                                 background-color: #24C9E3;
                                 display: flex;
                                 align-items: center;
-                                justify-content: space-between;
+                                // justify-content: space-around;
+                                // gap: 240px;
                                 margin: 0;
                                 padding: 1.19em 6px 1.13em 1.25em;
                                 border-radius: 0.31em;
                                 .txtbox{
+                                    min-width: 400px;
                                     display: flex;
                                     align-items: center;
                                     h3{
@@ -220,15 +208,22 @@ body{
                                 } 
                                 .menu_btn{
                                     .btn{
-                                        font-weight:600;
+                                        width: 120px;
+                                        height: 44px;
+                                        border: 1px solid #ffffff;
+                                        border-radius: 5px;
+                                        text-align: center;
+                                        padding: 9px 10px;
+                                        font-weight:500;
                                         font-size: 18px;
-                                        padding: 9px 27px;
                                         color: #ffffff;
                                     }
                                     .btn.active1{
+                                        border: 0px;
                                         background-color: #515E7B;
                                     }
                                     .btn:hover{
+                                        border: 0px;
                                         background-color: #515E7B;
                                     }
                                 }       
@@ -236,67 +231,101 @@ body{
                             }
                             .container_field{
                                 padding-left: 1.25em;
+                                
+                                margin-bottom: 50px;
                                 form{
-                                    legend{
-                                        margin: 1rem 0;
-                                        font-size: 18px;
-                                        color: #302B3A;
+                                    .agency_Info{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: flex-end;
+                                        border-bottom:2px solid #425571;
+                                        margin-bottom: 12px;
+                                        legend{
+                                            span{
+                                                font-size: 18px;
+                                                font-weight: bold;
+                                                margin-right: 30px;
+                                            }
+                                            margin: 20px 0;
+                                            font-size: 18px;
+                                            color: #302B3A;
+                                        }
+                                        button{
+                                            margin-bottom: 12px;
+                                            color: #ffffff;
+                                            font-size: 12px;
+                                            font-weight: 600;
+                                            background-color: #425571;
+                                            border-radius: 5px;
+                                            width: 80px;
+                                            height: 28px;
+                                        }
                                     }
                                     .agencyTitle{
                                         color: #302B3A;
-                                        font-size: 18px;
+                                        font-size: 13px;
+                                        font-weight: 600;
                                         input{
-                                            font-size: 16px;
-                                            width: 18.75em;
+                                            padding-left: 92px;
+                                            font-size: 13px;
+                                            width: 240px;
                                             border-radius: 0.31em;
                                             border:1px solid #707070;
-                                            margin-left:0.94em ;
+                                            margin-left: 92px;
                                             padding: 3px 10px;
                                         }
                                     }
                                     .agencyOwner{
                                         display: flex;
-                                        align-items: center;
+                                        flex-direction: column;
+                                        align-items: flex-start;
                                         margin: 1rem 0;
-                                        gap: 3.75em;
+                                        gap: 20px;
                                         p{
                                             color: #302B3A;
-                                            font-size: 18px;
+                                            font-size: 13px;
+                                            font-weight: 600;
+                                            
                                             input{
+                                                padding-left: 116px;
                                                 padding: 3px 10px;
-                                                font-size: 16px;
+                                                font-size: 13px;
                                                 border:1px solid #707070;
                                                 border-radius: 0.31em;
                                                 margin: 0 .2rem;
                                                 height: 1.88em;
+                                                width: 160px;
                                             }
                                         }
                                         p:nth-of-type(1){
                                             input{
-                                                margin-left:0.94em ;
-                                                width:7.50em;
+                                                margin-left:92px ;
                                             }
                                         }
                                         p:nth-of-type(2){
                                             input{
-                                                margin-left:1.13em ;
-                                                width:160px;
+                                                margin-left:92px ;
                                             }
                                         }
                                         .addressForm{
                                             display: flex;
                                             align-items: center;
-                                            font-size: 18px;
+                                            font-size: 13px;
+                                            font-weight: 600;
                                             p{
+                                                
                                                 color: #302B3A;
                                                 input{
+                                                    height: 26px;
                                                     padding: 3px 10px;
-                                                    font-size: 16px;
+                                                    font-size: 13px;
                                                     border-radius: 5px;
                                                 }
                                             }
                                             p:nth-of-type(1){
+                                                margin-left: 27px;
                                                 input{
+                                                    
                                                     width:80px;
                                                 }
                                             }
@@ -310,6 +339,185 @@ body{
                                                 
                                                 input{
                                                     width:380px;
+                                                }
+                                            }
+                                        }
+                                        .email{
+                                            color: #302B3A;
+                                            font-size: 13px;
+                                            font-weight: 600;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: .5rem;
+                                            input{
+                                                height: 26px;
+                                                font-size: 13px;
+                                                padding: 3px 10px ;
+                                                width: 240px;
+                                                border-radius: 5px;
+                                                border: 1px solid #707070;
+                                            }
+                                            input:nth-of-type(1){
+                                                margin-left: 46px;
+                                            }
+                                            span{
+                                                small{
+                                                    
+                                                }
+                                            }
+                                        }
+                                        .service{
+                                            display: flex;
+                                            gap: 80px;
+                                            align-items: center;
+                                            label{
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                                color: #41464B;
+                                            }
+                                            select{
+                                                height: 26px;
+                                                width: 160px;
+                                                border-radius: 5px;
+                                                padding: 2px 10px 5px 7px;
+                                                color: #484848;
+                                                font-size: 13px;
+                                                letter-spacing: -0.33px;
+                                                option{
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .center_transcription{
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 15px;
+                                        border-top: 1px solid #8F959E;
+                                        border-bottom: 1px solid #8F959E;
+                                        padding: 14px 0 17px;
+                                        .center{
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 92px;
+                                            p{
+                                                color: #41464B;
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                            }
+                                            .center_checkbox{
+                                                display: flex;
+                                                align-items: center;
+                                                input{}
+                                                input#check{
+                                                    display: none;
+                                                }
+                                                input#check,label{
+                                                    cursor: pointer;
+                                                    span{
+                                                        vertical-align: middle;
+                                                        padding-left: 10px;
+                                                    }
+                                                }
+                                                input#check+label::before{
+                                                    content: "";
+                                                    display: inline-block;
+                                                    width: 14px;
+                                                    height:14px;
+                                                    border: 1px solid #8F959E;
+                                                    vertical-align: middle;
+                                                }
+                                                input#check:checked+label::before{
+                                                    content: "";
+                                                    background-color: #ffffff;
+                                                    background-image: url('../../zilink/assets/img/checkbox.svg');
+                                                    background-repeat: no-repeat;
+                                                    background-position: 50%;
+                                                }
+                                                label{
+                                                    span{
+                                                        font-size: 13px;
+                                                        color: #484848;
+                                                        letter-spacing: -0.33px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .recording_date{
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 80px;
+                                            p{
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                                color: #41464B;
+                                            }
+                                            .recording_date_num{
+                                                position: relative;
+                                                input{
+                                                    width: 80px;
+                                                    height: 26px;
+                                                    padding: 3px 10px;
+                                                    padding-right: 40px;
+                                                    font-size: 13px;
+                                                    color: #484848;
+                                                    letter-spacing: -0.33px;
+                                                    border-radius: 5px;
+                                                    border: 1px solid #8F959E;
+                                                }
+                                                label{
+                                                    font-size: 13px;
+                                                    letter-spacing: -0.33px;
+                                                    position: absolute;
+                                                    right: 10px; 
+                                                    top: 50%; 
+                                                    transform: translateY(-50%);
+                                                    pointer-events: none;
+                                                    color: #484848;
+                                                }
+                                            }
+                                        }
+                                        .pickup_code{
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 92px;
+                                            p{
+                                                color: #41464B;
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                            }
+                                            .pickup{
+                                                select{
+                                                    width: 80px;
+                                                    height: 26px;
+                                                    color: #484848;
+                                                    font-size: 13px;
+                                                    padding: 3px 10px 3px 5px;
+                                                    border-radius: 5px;
+                                                    border: 1px solid #8F959E;
+                                                    option{
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .stop_recording{
+                                            display: flex;
+                                            gap: 32px;
+                                            align-items: center;
+                                            p{
+                                                color: #41464B;
+                                                font-size: 13px;
+                                                font-weight: 600;
+                                            }
+                                            .stop_record_btn{
+                                                input{
+                                                    border: 1px solid #8F959E;
+                                                    border-radius: 5px;
+                                                    width: 120px;
+                                                    height: 26px;
+                                                    padding: 3px 10px;
+                                                    font-size: 13px;
+                                                    color: #484848;
                                                 }
                                             }
                                         }
@@ -344,23 +552,683 @@ body{
                                             }
                                         }
                                         
-                                        .email{
-                                            color: #302B3A;
-                                            font-size: 18px;
-                                            display: flex;
-                                            align-items: center;
-                                            gap: .5rem;
-                                            input,select{
-                                                font-size: 16px;
-                                                padding: 3px 10px;
-                                                width: 240px;
-                                                border-radius: 5px;
-                                                border: 1px solid #707070;
+                                        
+                                    }
+                                }
+                                .center_detail{
+                                    display: flex;
+                                    gap: 40px;
+                                    .center_list{
+                                        width: 560px;
+                                        .center_listtitle{
+                                            margin: 20px 0;
+                                            p{
+                                                font-weight: bold;
+                                                font-size: 18px;
+                                                color: #302B3A;
                                             }
-                                            span{
-                                                small{
-                                                    
+                                        }
+                                        .center_listbox{
+                                            .center_listboxdetail{
+                                                height: 775px;
+                                                width: 560px;
+                                                border: 1px solid #8F959E;
+                                                .center_listboxheader{
+                                                    list-style: none;
+                                                    background-color: #7B8594;
+                                                    ul{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        li{
+                                                            list-style: none;
+                                                            font-size: 12px;
+                                                            font-weight: 600;
+                                                            color: #ffffff;
+                                                            height:26px;
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                        }
+                                                        li:nth-of-type(1){
+                                                            width: 43px;
+                                                        }
+                                                        li:nth-of-type(2){
+                                                            width: 270px;
+                                                            border-right: 1px solid #E1E6EC;
+                                                            border-left: 1px solid #E1E6EC;
+                                                        }
+                                                        li:nth-of-type(3){
+                                                            width: 244px;
+                                                        }
+                                                    }
                                                 }
+                                                .center_listboxcontent{
+                                                    list-style: none;
+                                                    ul{
+                                                        display: flex;
+
+                                                        li{
+                                                            border-bottom: 1px solid #8F959E;
+                                                            color: #484848;
+                                                            font-size: 13px;
+                                                            letter-spacing: -0.33px;
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            list-style: none;
+                                                            padding: 7px;
+                                                            cursor: pointer;
+                                                        }
+                                                        li:nth-of-type(1){
+                                                            width: 43px;
+                                                        }
+                                                        li:nth-of-type(2){
+                                                            width: 270px;
+                                                            border-right: 1px solid #E1E6EC;
+                                                            border-left: 1px solid #E1E6EC;
+                                                        }
+                                                        li:nth-of-type(3){
+                                                            width: 244px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .center_item{
+                                        width: 862px;
+                                        .center_item_info{
+                                            .center_item_maintitle{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: space-between;
+                                                p{
+                                                    margin: 20px 0;
+                                                    font-size: 18px;
+                                                    font-weight: bold;
+                                                    color: #302B3A;
+                                                }
+                                                button{
+                                                    border: 0px;
+                                                    font-size: 12px;
+                                                    font-weight: 600;
+                                                    color: #ffffff;
+                                                    background-color: #425571;
+                                                    padding: 5px 15px 6px ;
+                                                    border-radius: 5px;
+                                                }
+                                            }
+                                            .center_item_maindetail{
+                                                display: flex;
+                                                flex-direction: column;
+                                                gap: 14px;
+                                                padding: 9px 0 12px;
+                                                border-top:2px solid #425571;
+                                                border-bottom:2px solid #425571;
+                                                .center_name{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    gap: 104px;
+                                                    p{
+                                                        font-size: 13px;
+                                                        font-weight: 600;
+                                                        color: #41464B;
+                                                    }
+                                                    input{
+                                                        width: 332px;
+                                                        height: 26px;
+                                                        border-radius: 5px;
+                                                        border: 1px solid #8F959E;
+                                                        padding: 6px 96px 6px 10px;
+                                                        font-size: 13px;
+                                                        color: #484848;
+                                                        letter-spacing: -0.33px;
+                                                    }
+                                                }
+                                                .center_recordRetentionDate{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    gap: 80px;
+                                                    p{
+                                                        font-size: 13px;
+                                                        font-weight: 600;
+                                                        color: #41464B;
+                                                    }
+                                                    .recording_date_num{
+                                                        position: relative;
+                                                        input{
+                                                            width: 80px;
+                                                            height: 26px;
+                                                            padding: 3px 10px;
+                                                            padding-right: 40px;
+                                                            font-size: 13px;
+                                                            color: #484848;
+                                                            letter-spacing: -0.33px;
+                                                            border-radius: 5px;
+                                                            border: 1px solid #8F959E;
+                                                        }
+                                                        label{
+                                                            font-size: 13px;
+                                                            letter-spacing: -0.33px;
+                                                            position: absolute;
+                                                            right: 10px; 
+                                                            top: 50%; 
+                                                            transform: translateY(-50%);
+                                                            pointer-events: none;
+                                                            color: #484848;
+                                                        }
+                                                    }
+                                                }
+                                                .center_pickupCode{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    gap: 92px;
+                                                    p{
+                                                        font-size: 13px;
+                                                        font-weight: 600;
+                                                        color: #41464B;
+                                                    }
+                                                    .pickup{
+                                                        select{
+                                                            width: 80px;
+                                                            height: 26px;
+                                                            color: #484848;
+                                                            font-size: 13px;
+                                                            padding: 3px 10px 3px 5px;
+                                                            border-radius: 5px;
+                                                            border: 1px solid #8F959E;
+                                                            option{
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .center_record_stopbutton{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    gap: 32px;
+                                                    p{
+                                                        font-size: 13px;
+                                                        font-weight: 600;
+                                                        color: #41464B;
+                                                    }
+                                                    .stop_record_btn{
+                                                        input{
+                                                            border: 1px solid #8F959E;
+                                                            border-radius: 5px;
+                                                            width: 120px;
+                                                            height: 26px;
+                                                            padding: 3px 10px;
+                                                            font-size: 13px;
+                                                            color: #484848;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .recording_send{
+                                            .recording_title{
+                                                
+                                                p{
+                                                    margin: 20px 0;
+                                                    font-size: 18px;
+                                                    font-weight: bold;
+                                                    color: #302B3A;
+                                                }
+                                            }
+                                            .recording_detail{
+                                                display: flex;
+                                                gap: 120px;
+                                                border-top: 1px solid #8F959E;
+                                                border-bottom: 2px solid #425571;
+                                                padding: 14px 0 17px;
+                                                .recording_detail_left{
+                                                    .ftp{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        margin-top: 8px;
+                                                        
+                                                        p{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            color: #302B3A;
+                                                        }
+                                                        .ftp_inter{
+                                                            input{
+                                                                width: 200px;
+                                                                font-size: 13px;
+                                                                color: #484848;
+                                                                border-radius: 5px;
+                                                                border: 1px solid #8F959E;
+                                                                padding: 3px 21px 3px 10px;
+                                                            }
+                                                        }
+                                                    }
+                                                    .recording_detail_1{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        p{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            color: #41464B;
+                                                            letter-spacing: -0.33px;
+                                                        }
+                                                        .send_status{
+                                                            margin-left: 86px;
+                                                            select{
+                                                                width: 200px;
+                                                                height: 26px;
+                                                                color: #484848;
+                                                                font-size: 13px;
+                                                                padding: 3px 10px 3px 5px;
+                                                                border-radius: 5px;
+                                                                border: 1px solid #8F959E;
+                                                                option{
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .recording_detail_2{
+                                                        .ftp_inter{
+                                                            margin-left: 47px;
+                                                        }
+                                                    }
+                                                    .recording_detail_3{
+                                                        .ftp_inter{
+                                                            margin-left: 100px;
+                                                        }
+                                                    }
+                                                    .recording_detail_4{
+                                                        .ftp_inter{
+                                                            margin-left: 93px;
+                                                        }
+                                                    }
+                                                    .recording_detail_5{
+                                                        .ftp_inter{
+                                                            margin-left: 61px;
+                                                        }
+                                                    }
+                                                    .recording_detail_6{
+                                                        .ftp_inter{
+                                                            margin-left: 43px;
+                                                        }
+                                                    }
+                                                }
+                                                .recording_detail_right{
+                                                    .ftp{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        margin-top: 8px;
+                                                        
+                                                        p{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            color: #302B3A;
+                                                        }
+                                                        .ftp_inter{
+                                                            input{
+                                                                width: 200px;
+                                                                font-size: 13px;
+                                                                color: #484848;
+                                                                border-radius: 5px;
+                                                                border: 1px solid #8F959E;
+                                                                padding: 3px 21px 3px 10px;
+                                                            }
+                                                        }
+                                                    }
+                                                    .recording_detail_1{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        margin-top: 0px;
+                                                        p{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            color: #41464B;
+                                                            letter-spacing: -0.33px;
+                                                        }
+                                                        .ftp_inter{
+                                                            margin-left: 83px;
+                                                            input{
+                                                                width: 200px;
+                                                                height: 26px;
+                                                                color: #484848;
+                                                                font-size: 13px;
+                                                                padding: 3px 10px 3px 5px;
+                                                                border-radius: 5px;
+                                                                border: 1px solid #8F959E;
+                                                            }
+                                                        }
+                                                    }
+                                                    .recording_detail_2{
+                                                        .ftp_inter{
+                                                            margin-left: 86px;
+                                                        }
+                                                    }
+                                                    .recording_detail_3{
+                                                        .ftp_inter{
+                                                            margin-left: 78px;
+                                                        }
+                                                    }
+                                                    .recording_detail_4{
+                                                        .ftp_inter{
+                                                            margin-left: 89px;
+                                                        }
+                                                    }
+                                                    .recording_detail_5{
+                                                        .ftp_inter{
+                                                            margin-left: 62px;
+                                                        }
+                                                    }
+                                                    .recording_detail_6{
+                                                        .tell_url{
+                                                            margin-left: 43px;
+                                                            select{
+                                                                width: 200px;
+                                                                height: 26px;
+                                                                color: #484848;
+                                                                font-size: 13px;
+                                                                padding: 3px 10px 3px 5px;
+                                                                border-radius: 5px;
+                                                                border: 1px solid #8F959E;
+                                                                option{
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .insurance_transfer_info{
+                                            .insurance_transfer_title{
+                                                p{
+                                                    margin: 20px 0;
+                                                    font-size: 18px;
+                                                    font-weight: bold;
+                                                    color: #302B3A;
+                                                }
+                                            }
+                                            /* 흥국생명 */
+                                            .heungkuk{
+                                                display: flex;
+                                                align-items: center;
+                                                margin-top: 8px;
+                                                gap: 120px;
+                                                border-top: 1px solid #8F959E;
+                                                border-bottom: 1px solid #8F959E;
+                                                padding: 12px 0;
+                                                .heungkuk_left,.heungkuk_right{
+                                                    
+                                                    .infos{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        margin-top: 8px;
+                                                        p{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            color: #302B3A;
+                                                        }
+                                                        select{
+                                                            margin-left: 29px;
+                                                            width: 200px;
+                                                            height: 26px;
+                                                            color: #484848;
+                                                            font-size: 13px;
+                                                            padding: 3px 10px 3px 5px;
+                                                            border-radius: 5px;
+                                                            border: 1px solid #8F959E;
+                                                            option{
+                                                            }
+                                                        }
+                                                        .heungkuk_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    width: 200px;
+                                                                    font-size: 13px;
+                                                                    color: #484848;
+                                                                    border-radius: 5px;
+                                                                    border: 1px solid #8F959E;
+                                                                    padding: 3px 21px 3px 10px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .infos:nth-of-type(1){
+                                                        margin-top: 0px;
+                                                    }
+                                                }
+                                                .heungkuk_left{
+                                                    .infos:nth-of-type(2),.infos:nth-of-type(3){
+                                                        .heungkuk_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 50px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .heungkuk_right{
+                                                    .infos:nth-of-type(1),.infos:nth-of-type(2){
+                                                        .heungkuk_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 38px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .infos:nth-of-type(3){
+                                                        .heungkuk_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 42px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                
+                                            }
+                                            /* 에이스화재 */
+                                            .ace{
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 120px;
+                                                border-bottom: 1px solid #8F959E;
+                                                padding: 12px 0;
+                                                .ace_left,.ace_right{
+                                                    
+                                                    .infos{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        margin-top: 8px;
+                                                        p{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            color: #302B3A;
+                                                        }
+                                                        select{
+                                                            margin-left: 17px;
+                                                            width: 200px;
+                                                            height: 26px;
+                                                            color: #484848;
+                                                            font-size: 13px;
+                                                            padding: 3px 10px 3px 5px;
+                                                            border-radius: 5px;
+                                                            border: 1px solid #8F959E;
+                                                            option{
+                                                            }
+                                                        }
+                                                        .ace_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    width: 200px;
+                                                                    font-size: 13px;
+                                                                    color: #484848;
+                                                                    border-radius: 5px;
+                                                                    border: 1px solid #8F959E;
+                                                                    padding: 3px 21px 3px 10px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .infos:nth-of-type(1){
+                                                        margin-top: 0px;
+                                                    }
+                                                }
+                                                .ace_left{
+                                                    .infos:nth-of-type(2),.infos:nth-of-type(3){
+                                                        .ace_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 37px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .ace_right{
+                                                    .infos:nth-of-type(1),.infos:nth-of-type(2){
+                                                        .ace_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 26px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .infos:nth-of-type(3){
+                                                        .ace_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 30px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                
+                                            }
+                                            /* 삼성화재 */
+                                            .samsung{
+                                                display: flex;
+                                                align-items: flex-start;
+                                                gap: 120px;
+                                                border-bottom: 1px solid #8F959E;
+                                                padding: 12px 0;
+                                                .samsung_left,.samsung_right{
+                                                    .infos{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        
+                                                        p{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            color: #302B3A;
+                                                        }
+                                                        .samsung_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    width: 200px;
+                                                                    font-size: 13px;
+                                                                    color: #484848;
+                                                                    border-radius: 5px;
+                                                                    border: 1px solid #8F959E;
+                                                                    padding: 3px 21px 3px 10px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .samsung_left{
+                                                    .infos:nth-of-type(1){
+                                                        .samsung_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 41px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .infos:nth-of-type(2){
+                                                        margin-top: 8px;
+                                                        .samsung_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 16px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .samsung_right{
+                                                    .infos:nth-of-type(1){
+                                                        .samsung_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 29px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            /* 현대해상 */
+                                            .hyundai{
+                                                display: flex;
+                                                align-items: flex-start;
+                                                gap: 120px;
+                                                border-bottom: 1px solid #8F959E;
+                                                padding: 12px 0;
+                                                .hyundai_left,.hyundai_right{
+                                                    .infos{
+                                                        display: flex;
+                                                        align-items: center;
+                                                        
+                                                        p{
+                                                            font-size: 13px;
+                                                            font-weight: 600;
+                                                            color: #302B3A;
+                                                        }
+                                                        .hyundai_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    width: 200px;
+                                                                    font-size: 13px;
+                                                                    color: #484848;
+                                                                    border-radius: 5px;
+                                                                    border: 1px solid #8F959E;
+                                                                    padding: 3px 21px 3px 10px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .hyundai_left{
+                                                    .infos:nth-of-type(1){
+                                                        .hyundai_ftp{
+                                                            .ftp_inter{
+                                                                input{
+                                                                    margin-left: 16px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }   
+                                            }
+                                        }
+                                        .submit_btn{
+                                            input{
+                                                background-color: #3E79D2;
+                                                color: #ffffff;
+                                                width: 100px;
+                                                height: 26px;
+                                                text-align: center;
+                                                font-size: 13px;
+                                                font-weight: bold;
+                                                float: right;
+                                                margin-top: 10px;
+                                                border-radius: 5px;
+                                                border: 0px;
                                             }
                                         }
                                     }

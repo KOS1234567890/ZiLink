@@ -1,0 +1,58 @@
+@charset "UTF-8";
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p, button, span {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../../zilink/assets/img/fi-rr-caret-down.svg") right 5px center no-repeat;
+}
+
+body, html {
+  font-optical-sizing: auto;
+}
+
+input::-webkit-input-placeholder {
+  color: #41464B;
+}
+
+input::-moz-placeholder {
+  color: #41464B;
+}
+
+input:-ms-input-placeholder {
+  color: #41464B;
+}
+
+input::-ms-input-placeholder {
+  color: #41464B;
+}
+
+input::placeholder {
+  color: #41464B;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.hidden {
+  display: none;
+}
+
+/* HTML-input-typenumber-기본-속성-화살표-제거-하기 */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
